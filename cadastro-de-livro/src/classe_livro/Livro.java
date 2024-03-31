@@ -17,10 +17,18 @@ public class Livro {
         if (this.temAutor()) {
             autor.mostrarDetalhes();
         }
+        else {
+            System.out.println("Autor desconhecido.");
+        }
         System.out.println("------");
     }
 
     boolean temAutor() {
         return this.autor != null;
+    }
+
+    // método para dar desconto em um livro
+    public void aplicarDescontoDe(double desconto) {
+        this.valor -= this.valor * (desconto/100);
     }
 }

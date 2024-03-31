@@ -5,6 +5,7 @@ public class Livro {
     String descricao;
     double valor;
     String isbn;
+    Autor autor;
 
     void mostrarDetalhes() {
         System.out.println("Detalhes do Livro: ");
@@ -12,5 +13,14 @@ public class Livro {
         System.out.println("Descrição: " + descricao);
         System.out.println("Valor: " + valor);
         System.out.println("ISBN: " + isbn);
+
+        if (this.temAutor()) {
+            autor.mostrarDetalhes();
+        }
+        System.out.println("------");
+    }
+
+    boolean temAutor() {
+        return this.autor != null;
     }
 }
